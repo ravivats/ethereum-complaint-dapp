@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Complaint DApp</title>
+ <link rel="shortcut icon" href="favicon.png" type="image/png">
+ <link href='https://fonts.googleapis.com/css?family=Open Sans:400,700' rel='stylesheet' type='text/css'>
+ <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container">
+ <h1>Complaint Addressal System</h1>
+ 
+ <br><br>
+ 
+ <div class="table-responsive">
+  <table class="table table-bordered" id="table1">
+   <thead>
+    <tr>
+     <th>Complaint Title</th>
+	 <th>Complaint Category</th>
+	 <th>Complaint Description</th>
+     <th>Votes</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td id="title-0">Test Complaint</td>
+     <td>----</td>
+	 <td>----</td>
+	 <td id="candidate-0"></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ 
+ <br><br>
+ 
+ <input type="text" id="complaint" placeholder="To Upvote, enter complaint title and press 'Vote'."  size ="72" />
+ <a href="#" onclick="voteForComplaint()" class="btn btn-primary">Vote</a>
+ 
+ <br><br>
+ 
+ <input type="text" id="newctitle" placeholder="Complaint Title"/>
+ <input list="categories" id= "newccategory" placeholder="Complaint Category">
+ <input type="text" id="newcdesc" placeholder="Complaint Description"/>
+ 
+ <datalist id="categories">
+  <option value="Education">
+  <option value="Sanitation and Water Supply">
+  <option value="Waste Management">
+  <option value="Roads and Transport">
+  <option value="Electricity">
+  <option value="Healthcare">
+  <option value="Law and Order">
+ </datalist>
+ 
+ <a href="#" onclick="addSomething()" class="btn btn-primary">Add</a>
+ 
+ <br><br>
+ 
+ <a href="#" onclick="getDB()" class="btn btn-primary">Show Database</a>
+ 
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+</html>
